@@ -1,161 +1,101 @@
-/* Full CSS file with updates applied:
-   - Blue replaced with #676128 and light blue with #E1DFD4
-   - border-radius set to 0 globally
-   - Poppins replaced with Noto Sans
-   - Page titles use Benzin
-   - #F1F4F7 replaced with #F9F8F7 */
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@font-face {
-  font-family: 'Benzin';
-  src: url('https://storage.googleapis.com/msgsndr/dQnsV9M3QcNePrSSuGQP/media/67ab54c3192469e4dca3b74a.woff2') format('woff2'),
-       url('https://storage.googleapis.com/msgsndr/dQnsV9M3QcNePrSSuGQP/media/67ab54c3eeb73764b86ce85d.font-woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root {
-  --headline-font: 'Benzin', sans-serif;
-  --body-font: 'Noto Sans', sans-serif;
-  --brand-primary-color: #676128;
-  --brand-secondary-color: #E1DFD4;
-  --white-color: #ffffff;
-  --dark-color: #1A202C;
-  --ghl-white-label-dashboard-color: #F9F8F7;
-  --scroll-color: #9e9e9e;
-  --ghlstyle-transparent: rgba(0, 0, 0, 0);
-  --top-nav-menu-color: #2a3941ff;
-  --top-nav-menu-active-color: #676128;
-  --top-nav-menu-hover-color: #676128;
-  --top-nav-menu-bg: transparent;
-  --top-nav-menu-hover-bg: transparent;
-  --top-nav-menu-active-bg: transparent;
-  --top-nav-menu-font-size: 14px;
-  --top-nav-border-width: 0 0 0.1rem 0;
-  --top-nav-border-radius: 0;
-  --top-nav-border-style: solid;
-  --top-nav-border-color: transparent;
-  --top-nav-title-font-size: 24px;
-  --top-nav-title-color: var(--white-color);
-  --top-nav-bg-color: transparent;
-  --top-nav-bg-gradient: linear-gradient(250deg, transparent 88%, transparent 100%);
-}
-
-* {
-  border-radius: 0 !important;
-}
-
-body, div, p, span, a, button {
-  font-family: var(--body-font) !important;
-}
-
-h1, h2, h3, .topmenu-navtitle {
-  font-family: var(--headline-font) !important;
-}
-
-button,
-.bg-curious-blue-600,
-.text-curious-blue-600,
-.focus\:ring-curious-blue-500:focus,
-.bg-apple-500 {
-  background-color: var(--brand-primary-color) !important;
-  color: #fff !important;
-  border: 1px solid var(--brand-primary-color) !important;
-}
-
-.pagination a.active,
-.pagination a:hover {
-  background-color: var(--brand-primary-color) !important;
-  color: #fff !important;
-  border-color: var(--brand-primary-color) !important;
-}
-
-.n-base-selection-label,
-#quickActions,
-#globalSearchOpener {
-  background-color: var(--brand-secondary-color) !important;
-}
-
-.focus\:ring-curious-blue-500:focus {
-  --tw-ring-color: var(--brand-primary-color) !important;
-}
-
-.text-curious-blue-600 {
-  color: var(--brand-primary-color) !important;
-}
-
 #dashboard-wrapper {
-  background: unset !important;
-  background: var(--ghl-white-label-dashboard-color) !important;
+	background: unset !important;
+	background: var(--ghl-white-label-dashboard-color) !important;
 }
 
 /* ================= SCROLLBAR STYLES ================ */
 
+/* Scrollbar width */
 ::-webkit-scrollbar {
-  width: 7px;
+	width: 7px;
 }
 
+/* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
-  border-radius: 0;
+	background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
+	border-radius: 5px;
 }
 
+/* Thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
+	background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
 }
 
+/* Thumb on active */
 ::-webkit-scrollbar-thumb:active {
-  background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
+	background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
 }
+
 
 /* ================= SIDEBAR LAYOUT ================ */
 
+/* Sidebar navigation layout */
 #sidebar-v2 nav {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 3px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 3px !important;
 }
 
+/* Sidebar link styles */
 #sidebar-v2 nav a {
-  margin: 0 auto !important;
-  background-color: color-mix(in srgb, var(--menu-text-color), transparent 100%) !important;
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	margin: 0 auto !important;
 }
 
+
+/* ================= SIDEBAR LINK STATES ================ */
+
+/* Sidebar link default style */
+#sidebar-v2 nav a {
+	background-color: color-mix(in srgb, var(--menu-text-color), transparent 100%) !important;
+}
+
+/* Sidebar link hover state */
 #sidebar-v2 nav a:hover {
-  background-color: color-mix(in srgb, var(--menu-hover-color), transparent 0%) !important;
-  border-width: 0px !important;
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	background-color: color-mix(in srgb, var(--menu-hover-color), transparent 0%) !important;
+  /*background-image: var(--sidebar-menu-bg-gradient) !important;*/
+	border-width: 0px !important;
 }
 
+/* Sidebar link active state */
 #sidebar-v2 nav a.active {
-  background-color: color-mix(in srgb, var(--menu-active-color), transparent 0%) !important;
-  border-width: 0px !important;
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	background-color: color-mix(in srgb, var(--menu-active-color), transparent 0%) !important;
+  /*background-image: var(--sidebar-menu-bg-gradient) !important;*/
+	border-width: 0px !important;
 }
 
-#sidebar-v2 nav a span.nav-title,
-#sidebar-v2 nav a.active span.nav-title,
+/* Sidebar link text */
+#sidebar-v2 nav a span.nav-title {
+	color: color-mix(in srgb, var(--menu-text-color), transparent 10%) !important;
+}
+
+/* Active link text color */
+#sidebar-v2 nav a.active span.nav-title {
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+}
+
+/* Hovered link text color */
 #sidebar-v2 nav a:hover span.nav-title {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
 }
 
-/* Next chunk begins below */
-
+/* Sidebar menu color */
 #sidebar-v2 nav a {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
 }
 
+/* Sidebar menu hover color */
 #sidebar-v2 nav a:hover {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
 }
 
+/* Sidebar menu active color */
 #sidebar-v2 nav a.active {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
 }
 
 /* ================= MENU ICON CHANGE ================ */
 
+/* Hide original icons */
 #sb_launchpad img,
 #sb_dashboard img,
 #sb_conversations img,
@@ -174,9 +114,10 @@ button,
 #sb_app-marketplace img,
 #sb_location-mobile-app img,
 #sb_settings img {
-  display: none !important;
+	display: none !important;
 }
 
+/* Display new icons */
 #sb_launchpad::before,
 #sb_dashboard::before,
 #sb_conversations::before,
@@ -195,86 +136,87 @@ button,
 #sb_app-marketplace::before,
 #sb_location-mobile-app::before,
 #sb_settings::before {
-  content: '' !important;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 8px;
-  vertical-align: middle;
+	content: '' !important;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 8px;
+	vertical-align: middle;
 }
 
+/* Icon Change */
 #sb_launchpad::before {
-  background-image: var(--launch-pad-icon);
+	background-image: var(--launch-pad-icon);
 }
 
 #sb_dashboard::before {
-  background-image: var(--dashboard-icon);
+	background-image: var(--dashboard-icon);
 }
 
 #sb_conversations::before {
-  background-image: var(--conversations-icon);
+	background-image: var(--conversations-icon);
 }
 
 #sb_calendars::before {
-  background-image: var(--calendars-icon);
+	background-image: var(--calendars-icon);
 }
 
 #sb_contacts::before {
-  background-image: var(--contacts-icon);
+	background-image: var(--contacts-icon);
 }
 
 #sb_opportunities::before {
-  background-image: var(--opportunities-icon);
+	background-image: var(--opportunities-icon);
 }
 
 #sb_payments::before {
-  background-image: var(--payments-icon);
+	background-image: var(--payments-icon);
 }
 
 [id="sb_AI Agents"]::before {
-  background-image: var(--ai-agents-icon);
+	background-image: var(--ai-agents-icon);
 }
 
 #sb_email-marketing::before {
-  background-image: var(--marketing-icon);
+	background-image: var(--marketing-icon);
 }
 
 #sb_automation::before {
-  background-image: var(--automations-icon);
+	background-image: var(--automations-icon);
 }
 
 #sb_sites::before {
-  background-image: var(--sites-icon);
+	background-image: var(--sites-icon);
 }
 
 #sb_memberships::before {
-  background-image: var(--memberships-icon);
+	background-image: var(--memberships-icon);
 }
 
 #sb_app-media::before {
-  background-image: var(--media-storage-icon);
+	background-image: var(--media-storage-icon);
 }
 
 #sb_reputation::before {
-  background-image: var(--reputation-icon);
+	background-image: var(--reputation-icon);
 }
 
 #sb_reporting::before {
-  background-image: var(--reporting-icon);
+	background-image: var(--reporting-icon);
 }
 
 #sb_app-marketplace::before {
-  background-image: var(--app-marketplace-icon);
+	background-image: var(--app-marketplace-icon);
 }
 
 #sb_location-mobile-app::before {
-  background-image: var(--mobile-app-icon);
+	background-image: var(--mobile-app-icon);
 }
 
 #sb_settings::before {
-  background-image: var(--settings-icon);
+	background-image: var(--settings-icon);
 }
 
 #sb_launchpad,
@@ -295,9 +237,10 @@ button,
 #sb_app-marketplace,
 #sb_location-mobile-app,
 #sb_settings {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
+
 #sb_launchpad span.nav-title,
 #sb_dashboard span.nav-title,
 #sb_conversations span.nav-title,
@@ -321,6 +264,7 @@ button,
 
 /* ================= MENU TEXT STYLES ================ */
 
+/* Hide the original text and show the new text */
 #sb_launchpad span,
 #sb_dashboard span,
 #sb_conversations span,
@@ -339,261 +283,364 @@ button,
 #sb_app-marketplace span,
 #sb_location-mobile-app span,
 #sb_settings span {
-  visibility: hidden;
-  position: absolute;
+	visibility: hidden;
+	position: absolute;
 }
 
-#sb_launchpad::after { content: var(--Launch-Pad-Text); }
-#sb_dashboard::after { content: var(--Dashboard-Text); }
-#sb_conversations::after { content: var(--Conversations-Text); }
-#sb_calendars::after { content: var(--Calendar-Text); }
-#sb_contacts::after { content: var(--Contacts-Text); }
-#sb_opportunities::after { content: var(--Opportunities-Text); }
-#sb_payments::after { content: var(--Payments-Text); }
-[id="sb_AI Agents"]::after { content: var(--AI-Agents-Text); }
-#sb_email-marketing::after { content: var(--Marketing-Text); }
-#sb_automation::after { content: var(--Automations-Text); }
-#sb_sites::after { content: var(--Sites-Text); }
-#sb_memberships::after { content: var(--Memberships-Text); }
-#sb_app-media::after { content: var(--Media-Storage-Text); }
-#sb_reputation::after { content: var(--Reputation-Text); }
-#sb_reporting::after { content: var(--Reporting-Text); }
-#sb_app-marketplace::after { content: var(--App-Marketplace-Text); }
-#sb_location-mobile-app::after { content: var(--Mobile-App-Text); }
-#sb_settings::after { content: var(--Settings-Text); }
-
-.v2-collapse #sidebar-v2 nav a {
-  display: inline-block !important;
+#sb_launchpad::after {
+	content: var(--Launch-Pad-Text);
 }
 
-.v2-collapse #sidebar-v2 nav a::after {
-  display: none;
+#sb_dashboard::after {
+	content: var(--Dashboard-Text);
 }
 
-.v2-open #sidebar-v2 nav a::after {
-  display: inline-block;
+#sb_conversations::after {
+	content: var(--Conversations-Text);
 }
+
+#sb_calendars::after {
+	content: var(--Calendar-Text);
+}
+
+#sb_contacts::after {
+	content: var(--Contacts-Text);
+}
+
+#sb_opportunities::after {
+	content: var(--Opportunities-Text);
+}
+
+#sb_payments::after {
+	content: var(--Payments-Text);
+}
+
+[id="sb_AI Agents"]::after {
+	content: var(--AI-Agents-Text);
+}
+
+#sb_email-marketing::after {
+	content: var(--Marketing-Text);
+}
+
+#sb_automation::after {
+	content: var(--Automations-Text);
+}
+
+#sb_sites::after {
+	content: var(--Sites-Text);
+}
+
+#sb_memberships::after {
+	content: var(--Memberships-Text);
+}
+
+#sb_app-media::after {
+	content: var(--Media-Storage-Text);
+}
+
+#sb_reputation::after {
+	content: var(--Reputation-Text);
+}
+
+#sb_reporting::after {
+	content: var(--Reporting-Text);
+}
+
+#sb_app-marketplace::after {
+	content: var(--App-Marketplace-Text);
+}
+
+#sb_location-mobile-app::after {
+	content: var(--Mobile-App-Text);
+}
+
+#sb_settings::after {
+	content: var(--Settings-Text);
+}
+
+/* Show icon when menu is collapsed */
+.v2-collapse #sidebar-v2 nav a#sb_launchpad,
+.v2-collapse #sidebar-v2 nav a#sb_dashboard,
+.v2-collapse #sidebar-v2 nav a#sb_conversations,
+.v2-collapse #sidebar-v2 nav a#sb_calendars,
+.v2-collapse #sidebar-v2 nav a#sb_contacts,
+.v2-collapse #sidebar-v2 nav a#sb_opportunities,
+.v2-collapse #sidebar-v2 nav a#sb_payments,
+.v2-collapse #sidebar-v2 nav a[id="sb_AI Agents"],
+.v2-collapse #sidebar-v2 nav a#sb_email-marketing,
+.v2-collapse #sidebar-v2 nav a#sb_automation,
+.v2-collapse #sidebar-v2 nav a#sb_sites,
+.v2-collapse #sidebar-v2 nav a#sb_memberships,
+.v2-collapse #sidebar-v2 nav a#sb_app-media,
+.v2-collapse #sidebar-v2 nav a#sb_reputation,
+.v2-collapse #sidebar-v2 nav a#sb_reporting,
+.v2-collapse #sidebar-v2 nav a#sb_app-marketplace,
+.v2-collapse #sidebar-v2 nav a#sb_location-mobile-app,
+.v2-collapse #sidebar-v2 nav a#sb_settings {
+ display: inline-block !important;
+}
+
+/* Hide text when menu is collapsed */
+.v2-collapse #sb_launchpad::after,
+.v2-collapse #sb_dashboard::after,
+.v2-collapse #sb_conversations::after,
+.v2-collapse #sb_calendars::after,
+.v2-collapse #sb_contacts::after,
+.v2-collapse #sb_opportunities::after,
+.v2-collapse #sb_payments::after,
+.v2-collapse [id="sb_AI Agents"]::after,
+.v2-collapse #sb_email-marketing::after,
+.v2-collapse #sb_automation::after,
+.v2-collapse #sb_sites::after,
+.v2-collapse #sb_memberships::after,
+.v2-collapse #sb_app-media::after,
+.v2-collapse #sb_reputation::after,
+.v2-collapse #sb_reporting::after,
+.v2-collapse #sb_app-marketplace::after,
+.v2-collapse #sb_location-mobile-app::after,
+.v2-collapse #sb_settings::after {
+	display: none;
+}
+
+/* Ensure text is shown when menu is expanded */
+.v2-open #sb_launchpad::after,
+.v2-open #sb_dashboard::after,
+.v2-open #sb_conversations::after,
+.v2-open #sb_calendars::after,
+.v2-open #sb_contacts::after,
+.v2-open #sb_opportunities::after,
+.v2-open #sb_payments::after,
+.v2-open [id="sb_AI Agents"]::after,
+.v2-open #sb_email-marketing::after,
+.v2-open #sb_automation::after,
+.v2-open #sb_sites::after,
+.v2-open #sb_memberships::after,
+.v2-open #sb_app-media::after,
+.v2-open #sb_reputation::after,
+.v2-open #sb_reporting::after,
+.v2-open #sb_app-marketplace::after,
+.v2-open #sb_location-mobile-app::after,
+.v2-open #sb_settings::after {
+	display: inline-block;
+}
+
+
+/* Hide text when menu is collapsed */
+.v2-collapse #sb_launchpad::after,
+.v2-collapse #sb_dashboard::after,
+.v2-collapse #sb_conversations::after,
+.v2-collapse #sb_calendars::after,
+.v2-collapse #sb_contacts::after,
+.v2-collapse #sb_opportunities::after,
+.v2-collapse #sb_payments::after,
+.v2-collapse [id="sb_AI Agents"]::after,
+.v2-collapse #sb_email-marketing::after,
+.v2-collapse #sb_automation::after,
+.v2-collapse #sb_sites::after,
+.v2-collapse #sb_memberships::after,
+.v2-collapse #sb_app-media::after,
+.v2-collapse #sb_reputation::after,
+.v2-collapse #sb_reporting::after,
+.v2-collapse #sb_app-marketplace::after,
+.v2-collapse #sb_location-mobile-app::after,
+.v2-collapse #sb_settings::after {
+	display: none;
+}
+
+/* Ensure text is shown when menu is expanded */
+.v2-open #sb_launchpad::after,
+.v2-open #sb_dashboard::after,
+.v2-open #sb_conversations::after,
+.v2-open #sb_calendars::after,
+.v2-open #sb_contacts::after,
+.v2-open #sb_opportunities::after,
+.v2-open #sb_payments::after,
+.v2-open [id="sb_AI Agents"]::after,
+.v2-open #sb_email-marketing::after,
+.v2-open #sb_automation::after,
+.v2-open #sb_sites::after,
+.v2-open #sb_memberships::after,
+.v2-open #sb_app-media::after,
+.v2-open #sb_reputation::after,
+.v2-open #sb_reporting::after,
+.v2-open #sb_app-marketplace::after,
+.v2-open #sb_location-mobile-app::after,
+.v2-open #sb_settings::after {
+	display: inline-block;
+}
+
 /* ================= TOP NAV BASE STYLES ================ */
 
+/* Top nav */
 .hl_header > .topmenu-nav {
-  background: var(--top-nav-bg-color) !important;
+	background: var(--top-nav-bg-color) !important;
+  /*background-image: var(--top-nav-bg-gradient) !important;*/;
 }
 
+/* Top nav container */
 .topmenu-nav {
-  display: flex !important;
-  gap: 5px !important;
-  align-items: center !important;
-  position: relative !important;
-  padding-left: 17px !important;
+	display: flex !important;
+	gap: 5px !important;
+	align-items: center !important;
+	position: relative !important;
+	padding-left: 17px !important;
 }
 
+/* Top nav links */
 .topmenu-nav > a {
-  padding: 0 5px 7px 5px !important;
-  margin: 0 !important;
-  border-bottom-width: 0.1rem !important;
-  border-style: var(--top-nav-border-style) !important;
-  border-color: var(--top-nav-border-color) !important;
-  border-radius: var(--top-nav-border-radius) !important;
-  font-size: var(--top-nav-menu-font-size) !important;
-  color: var(--top-nav-menu-color) !important;
-  background-color: var(--top-nav-menu-bg) !important;
+	padding: 0px 5px 7px 5px !important;
+	margin: 0 !important;
+	border-bottom-width: 2px !important;
+	border-radius: 0px;
 }
 
+/* Hide top nav icons and dividers */
 .topmenu-nav > a img,
 .topmenu-nav > a.divider {
-  display: none !important;
+	display: none !important;
 }
 
+/* Top nav title positioning */
 .topmenu-navtitle {
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  position: absolute !important;
-  top: -35px !important;
-  left: 20px !important;
-  z-index: 99 !important;
-  font-size: var(--top-nav-title-font-size) !important;
-  color: var(--top-nav-title-color) !important;
-  font-family: var(--headline-font) !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	display: flex !important;
+	position: absolute !important;
+	top: -35px !important;
+	left: 20px !important;
+	z-index: 99 !important;
 }
+
 
 /* ================= TOP NAV CUSTOMIZATION ================ */
 
-nav[aria-label="Tabs"] a[style*="color:rgb(56,160,219)"] {
-  color: var(--brand-primary-color) !important;
-  border-color: var(--brand-primary-color) !important;
+/* Tabs active link override */
+nav[aria-label="Tabs"]
+  a[style="color:rgb(56,160,219);padding-left:10px;padding-right:10px;border-color:rgb(56,160,219);"],
+nav[aria-label="Tabs"]
+  a[style="color:rgb(56,160,219);border-color:rgb(56,160,219);padding-left:10px;padding-right:10px;"] {
+	color: var(--brand-primary-color) !important;
+	border-color: var(--brand-primary-color) !important;
 }
 
+/* Top nav title styling */
 div.topmenu-navtitle {
-  color: var(--top-nav-title-color) !important;
-  font-size: var(--top-nav-title-font-size) !important;
-  font-family: var(--headline-font) !important;
+	color: var(--top-nav-title-color) !important;
+	font-size: var(--top-nav-title-font-size) !important;
 }
 
+/* Top nav link base style */
 .topmenu-nav a {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 40%) !important;
-  background-color: var(--top-nav-menu-bg) !important;
-  font-size: var(--top-nav-menu-font-size) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 40%) !important;
+	background-color: var(--top-nav-menu-bg) !important;
+	font-size: var(--top-nav-menu-font-size) !important;
 }
 
+/* Top nav link border & effects */
 .topmenu-nav > a {
-  border-width: var(--top-nav-border-width, 0) !important;
-  border-radius: var(--top-nav-border-radius) !important;
-  border-style: var(--top-nav-border-style) !important;
-  border-color: var(--top-nav-border-color) !important;
-  box-shadow: var(--top-nav-box-shadow) !important;
+	border-width: var(--top-nav-border-width, 0) !important;
+	border-radius: var(--top-nav-border-radius) !important;
+	border-style: var(--top-nav-border-style) !important;
+	border-color: var(--top-nav-border-color) !important;
+	box-shadow: var(--top-nav-box-shadow) !important;
 }
 
+/* Top nav hover state */
 .topmenu-nav a:hover {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 20%) !important;
-  background-color: var(--top-nav-menu-hover-bg) !important;
-  border-width: var(--top-nav-border-hover-width, 0) !important;
-  border-radius: var(--top-nav-border-hover-radius) !important;
-  border-style: var(--top-nav-border-hover-style) !important;
-  border-color: var(--top-nav-border-hover-color) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 20%) !important;
+	background-color: var(--top-nav-menu-hover-bg) !important;
+	border-width: var(--top-nav-border-hover-width, 0) !important;
+	border-radius: var(--top-nav-border-hover-radius) !important;
+	border-style: var(--top-nav-border-hover-style) !important;
+	border-color: var(--top-nav-border-hover-color) !important;
 }
 
+/* Top nav active state */
 .topmenu-nav a.active {
-  color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
-  background-color: var(--top-nav-menu-active-bg) !important;
-  border-width: var(--top-nav-border-active-width, 0) !important;
-  border-radius: var(--top-nav-border-active-radius) !important;
-  border-style: var(--top-nav-border-active-style) !important;
-  border-color: var(--top-nav-border-active-color) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+	background-color: var(--top-nav-menu-active-bg) !important;
+	border-width: var(--top-nav-border-active-width, 0) !important;
+	border-radius: var(--top-nav-border-active-radius) !important;
+	border-style: var(--top-nav-border-active-style) !important;
+	border-color: var(--top-nav-border-active-color) !important;
 }
 
 .topmenu-nav a div[role="menu"] {
-  background-color: var(--ghl-sidebar-color) !important;
+	background-color: var(--ghl-sidebar-color) !important;
 }
+
 /* ================= HEADER ICON STYLES ================= */
 
 /* Power Dialer Icon */
-#template-power-dialer button > svg {
-  display: none !important;
+
+#template-power-dialer button > svg{
+ Display:none !important;
 }
 
 #template-power-dialer button::before {
-  content: '' !important;
-  background-image: var(--icon-dialer);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
+	content: '' !important;
+	background-image: var(--icon-dialer);
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
+
 /* Notification Icon */
+
 #recent_activities-toggle i {
   display: none !important;
 }
 
 #recent_activities-toggle::before {
-  content: '' !important;
-  background-image: var(--icon-activitie);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
+	content: '' !important;
+	background-image: var(--icon-activitie);
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
+
 /* Help Icon */
+
 #hl_header--help-icon i {
   display: none !important;
 }
 
 #hl_header--help-icon::before {
-  content: '' !important;
-  background-image: var(--icon-help);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
+	content: '' !important;
+	background-image: var(--icon-help);
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
+
 /* Canny Icon */
+
 #canny_logs-toggle i {
   display: none !important;
 }
 
 #canny_logs-toggle::before {
-  content: '' !important;
-  background-image: var(--icon-canny-logs);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-/* ================= HEADER ICON STYLES ================= */
-
-/* Power Dialer Icon */
-#template-power-dialer button > svg {
-  display: none !important;
-}
-
-#template-power-dialer button::before {
-  content: '' !important;
-  background-image: var(--icon-dialer);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-/* Notification Icon */
-#recent_activities-toggle i {
-  display: none !important;
-}
-
-#recent_activities-toggle::before {
-  content: '' !important;
-  background-image: var(--icon-activitie);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-/* Help Icon */
-#hl_header--help-icon i {
-  display: none !important;
-}
-
-#hl_header--help-icon::before {
-  content: '' !important;
-  background-image: var(--icon-help);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-/* Canny Icon */
-#canny_logs-toggle i {
-  display: none !important;
-}
-
-#canny_logs-toggle::before {
-  content: '' !important;
-  background-image: var(--icon-canny-logs);
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
+	content: '' !important;
+	background-image: var(--icon-canny-logs);
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
 /* ================= CARD STYLES ================ */
@@ -618,8 +665,8 @@ div.topmenu-navtitle {
 .automations-reporting-google-ads-report .dashboard-widget-module-custom .hl-card-header,
 .crm-locations-tasks .dashboard-widget-module-custom .hl-card-header,
 .crm-conversations-manual-actions .dashboard-widget-module-custom .hl-card-header {
-  background: unset !important;
-  background: var(--ghl-widgets-color) !important;
+	background: unset !important;
+	background: var(--ghl-widgets-color) !important;
 }
 
 /* Common styles for content */
@@ -650,281 +697,347 @@ div.topmenu-navtitle {
 .dashboard-widget-module-crm-contacts .truncate .hl-text-md-medium,
 .dashboard-widget-module-crm-conversations .truncate .hl-text-md-medium,
 .custom-chart-container .hl-card-header .justify-between .truncate .hl-text-md-medium {
-  color: var(--ghl-widgets-text-color) !important;
+	color: var(--ghl-widgets-text-color) !important;
 }
 
 /* Card header background */
 #location-dashboard .hl-card-header {
-  border-top-left-radius: 8px !important;
-  border-top-right-radius: 8px !important;
-  background: var(--ghl-widgets-color) !important;
-  /* background-image: var(--card-header-bg-gradient) !important; */
+	border-top-left-radius: 8px !important;
+	border-top-right-radius: 8px !important;
+	background: var(--ghl-widgets-color) !important;
+  /* background-image: var(--card-header-bg-gradient) !important; */;
 }
 
 /* Card title text */
 #location-dashboard .hl-card-header .hl-text-md-medium {
-  color: var(--ghl-widgets-text-color) !important;
+	color: var(--ghl-widgets-text-color) !important;
 }
 
 /* Card description text */
 #location-dashboard .hl-card-header .hl-text-xs-regular {
-  color: color-mix(in srgb, var(--ghl-widgets-text-color), transparent 30%) !important;
+	color: color-mix(in srgb, var(--ghl-widgets-text-color), transparent 30%) !important;
 }
 
+
 /* Card body text & background */
+
 #location-dashboard .hl-card-content {
-  background: color-mix(in srgb, var(--ghl-widgets-bg-color), transparent 0%) !important;
-  border-bottom-right-radius: 8px !important;
-  border-bottom-left-radius: 8px !important;
+	background: color-mix(in srgb, var(--ghl-widgets-bg-color), transparent 0%) !important;
+	border-bottom-right-radius: 8px !important;
+	border-bottom-left-radius: 8px !important;
 }
 
 .location-dashboard-popover-date-property {
-  background: color-mix(in srgb, var(--white-color), transparent 100%) !important;
-  width: 30px !important;
-  height: 30px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border-radius: 20px !important;
+	background: color-mix(in srgb, var(--white-color), transparent 100%) !important;
+	width: 30px !important;
+	height: 30px !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	border-radius: 20px !important;
 }
 
 .location-dashboard-popover-date-property svg {
-  stroke: color-mix(in srgb, var(--ghl-widgets-icon-color), transparent 0%) !important;
+	stroke: color-mix(in srgb, var(--ghl-widgets-icon-color), transparent 0%) !important;
 }
 
 .location-dashboard-popover-date-property:hover svg {
-  stroke: var(--white-color) !important;
+	stroke: var(--white-color) !important;
 }
 
 #location-dashboard .location-dashboard-popover-date-property > div[id] {
-  border-radius: 20px !important;
+	border-radius: 20px !important;
 }
 
 #location-dashboard .location-dashboard-popover-date-property > div[id]:hover {
-  background: color-mix(in srgb, var(--white-color), transparent 90%) !important;
+	background: color-mix(in srgb, var(--white-color), transparent 90%) !important;
 }
 
 .n-base-selection-label {
-  background: color-mix(in srgb, var(--white-color), transparent 90%) !important;
+	background: color-mix(in srgb, var(--white-color), transparent 90%) !important;
 }
 
 .n-base-selection__border {
-  border: 0px solid red !important;
+	border: 0px solid red !important;
 }
 
 .n-base-selection {
-  border: 0px solid red !important;
-  box-shadow: 0 0px 0px var(--ghlstyle-transparent) !important;
-  border-radius: 5px !important;
-  color: red !important;
+	border: 0px solid red !important;
 }
 
-.hl-card-header .n-base-selection .n-base-selection-overlay .n-base-selection-overlay__wrapper,
-.hl-card-header .n-base-selection-input__content,
-.hl-card-header .n-base-selection .n-base-suffix .n-base-suffix__arrow {
-  color: color-mix(in srgb, var(--ghl-widgets-text-color), transparent 30%) !important;
+/* .n-input {
+    box-shadow: 0 0px 0px var(--ghlstyle-transparent) !important;
+    border-radius: 5px !important;
+    color: red !important;
+} */
+
+.n-base-selection {
+	box-shadow: 0 0px 0px var(--ghlstyle-transparent) !important;
+	border-radius: 5px !important;
+	color: red !important;
+}
+
+.hl-card-header .n-base-selection .n-base-selection-overlay .n-base-selection-overlay__wrapper, .hl-card-header .n-base-selection-input__content, .hl-card-header .n-base-selection .n-base-suffix .n-base-suffix__arrow {
+    color: color-mix(in srgb, var(--ghl-widgets-text-color), transparent 30%) !important;
 }
 
 /* ================= LOCATION SWITCHER STYLES ================= */
 
+/* Location switcher container */
 #sidebar-v2 #location-switcher-sidbar-v2 {
-  background: color-mix(in srgb, var(--brand-accent-color), transparent 50%) !important;
-  max-width: 210px !important;
-  margin: 0 auto 20px auto !important;
-  width: 100% !important;
+	background: color-mix(in srgb, var(--brand-acent-color), transparent 50%) !important;
+	max-width: 210px !important;
+	margin: 0 auto !important;
+	margin-bottom: 20px !important;
+	width: 100% !important;
 }
 
+/* Location name text */
 #sidebar-v2 #location-switcher-sidbar-v2 .hl_switcher-loc-name {
-  color: var(--white-color) !important;
+	color: var(--white-color) !important;
 }
 
+/* Location city text */
 #sidebar-v2 #location-switcher-sidbar-v2 .hl_switcher-loc-city {
-  color: var(--white-color) !important;
-  opacity: 0.8 !important;
+	color: var(--white-color) !important;
+	opacity: 0.8 !important;
 }
 
+/* Location icon fill */
 #sidebar-v2 #location-switcher-sidbar-v2 .hl_location_icon {
-  fill: var(--dark-color) !important;
+	fill: var(--dark-color) !important;
 }
 
+/* Icon rectangle background */
 #sidebar-v2 #location-switcher-sidbar-v2 .hl_location_icon rect {
-  fill: var(--white-color) !important;
-  fill-opacity: 0.6 !important;
+	fill: var(--white-color) !important;
+	fill-opacity: 0.6 !important;
 }
 
-.sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .hl_location_icon g path {
-  stroke: var(--white-color) !important;
-  stroke-opacity: 0.8 !important;
+/* Location icon stroke */
+.sidebar-v2-location
+  #sidebar-v2
+  #location-switcher-sidbar-v2
+  .hl_location_icon
+  g
+  path {
+	stroke: var(--white-color) !important;
+	stroke-opacity: 0.8 !important;
 }
 
-#sidebar-v2 #location-switcher-sidbar-v2 .switcher-caret-holder .fa-angle-up:before,
-.sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .switcher-caret-holder .fa-angle-down:before {
-  color: var(--white-color) !important;
-  opacity: 1 !important;
+/* Caret icon color */
+#sidebar-v2
+  #location-switcher-sidbar-v2
+  .switcher-caret-holder
+  .fa-angle-up:before,
+.sidebar-v2-location
+  #sidebar-v2
+  #location-switcher-sidbar-v2
+  .switcher-caret-holder
+  .fa-angle-down:before {
+	color: var(--white-color) !important;
+	opacity: 1 !important;
 }
 
+/* Tooltip style */
 .tooltip .tooltip-inner {
-  background-color: var(--dark-color) !important;
-  color: var(--white-color) !important;
+	background-color: var(--dark-color) !important;
+	color: var(--white-color) !important;
 }
 
 /* ================= BACK BUTTON, SEARCH, QUICK ACTIONS & DIVIDER ================= */
 
+/* Global search button style */
 #globalSearchOpener {
-  margin-right: auto !important;
+	margin-right: auto !important;
   margin-left: auto !important;
-  background-color: color-mix(in srgb, var(--brand-accent-color), transparent 50%) !important;
+	background-color: color-mix(in srgb, var(--brand-acent-color), transparent 50%) !important;
 }
 
 body #quickActions {
-  border: none !important;
-  border-radius: 50px !important;
-  background-color: color-mix(in srgb, var(--brand-accent-color), transparent 50%) !important;
-  margin-right: auto !important;
+	border: none !important;
+	border-radius: 50px !important;
+	background-color: color-mix(in srgb, var(--brand-acent-color), transparent 50%) !important;
+	margin-right: auto !important;
   margin-left: auto !important;
 }
 
+
+/* Search icon color */
 .sidebar-v2-location #sidebar-v2 #globalSearchOpener .search-icon {
-  fill: var(--white-color) !important;
+	fill: var(--white-color) !important;
 }
 
+/* Search placeholder text color */
 .sidebar-v2-location #sidebar-v2 #globalSearchOpener .search-placeholder {
-  color: var(--white-color) !important;
+	color: var(--white-color) !important;
 }
 
+/* Quick actions icon color invert */
 #quickActions img {
-  filter: brightness(0) invert(1) !important;
+	filter: brightness(0) invert(1) !important;
 }
 
-.sidebar-v2-location #sidebar-v2 #globalSearchOpener .search-shortcut,
-.sidebar-v2-location #sidebar-v2 #quickActions .search-shortcut {
-  background-color: color-mix(in srgb, #000000, transparent 80%);
-  color: var(--white-color) !important;
+.sidebar-v2-location #sidebar-v2 #globalSearchOpener .search-shortcut, .sidebar-v2-location #sidebar-v2 #quickActions .search-shortcut {
+	background-color: color-mix(in srgb, #000000, transparent 80%);
+	color: var(--white-color) !important;
 }
 
+/* Divider styling in nav (non-clickable label) */
 .sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.divider {
-  pointer-events: none !important;
-  border: none !important;
-  background: var(--white-color) !important;
-  opacity: 1 !important;
+	pointer-events: none !important;
+	border: none !important;
+	background: var(--white-color) !important;
+	opacity: 1 !important;
 }
 
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.divider p span {
-  color: var(--dark-color) !important;
-  background: transparent !important;
-  padding: 0px !important;
-  font-size: 12px !important;
+/* Divider label text */
+.sidebar-v2-location
+  #sidebar-v2
+  .hl_nav-header-without-footer
+  nav
+  a.divider
+  p
+  span {
+	color: var(--dark-color) !important;
+	background: transparent !important;
+	padding: 0px !important;
+	font-size: 12px !important;
 }
 
+/* Remove border around divider label */
 .sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.divider p {
-  border: none !important;
+	border: none !important;
 }
 
+/* Back Button All CSS */
 .sidebar-v2-location #sidebar-v2 #backButtonv2,
 .sidebar-v2-agency #sidebar-v2 #backButtonv2 {
-  background-color: var(--sidebar-menu-active-bg) !important;
-  color: var(--sidebar-menu-active-color) !important;
+	background-color: var(--sidebar-menu-active-bg) !important;
+	color: var(--sidebar-menu-active-color) !important;
 }
 
 .sidebar-v2-location #sidebar-v2 #backButtonv2 + .menu-title,
 .sidebar-v2-agency #sidebar-v2 #backButtonv2 + .menu-title {
-  color: var(--sidebar-menu-color) !important;
-  padding-left: 20px !important;
+	color: var(--sidebar-menu-color) !important;
+	padding-left: 20px !important;
 }
 
 /* ================= COLLAPSE BUTTON STYLES ================= */
+
+/* Collapse button background */
 #sidebar-v2 .hl_collapse-button {
-  background: var(--ghlstyle-transparent) !important;
+	background: var(--ghlstyle-transparent) !important;
 }
 
+/* Collapse button text color for agency layout */
 .sidebar-v2-agency #sidebar-v2 .hl_collapse-button {
-  color: var(--white-color);
+	color: var(--white-color);
 }
 
+/* Collapse button custom style for location layout */
 .sidebar-v2-location #sidebar-v2 .hl_collapse-button::before {
-  color: var(--sidebar-bottom-toggle) !important;
-  background: var(--white-color) !important;
-  border-radius: 20px;
-  position: relative !important;
-  left: -1px !important;
-  width: 100% !important;
-  height: 100% !important;
+	color: var(--sidebar-bottom-toggle) !important;
+	background: var(--white-color) !important;
+	border-radius: 20px;
+	position: relative !important;
+	left: -1px !important;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 /* ================= PRIMARY COLOR STYLES ================= */
-body[data-theme="default-dark-v1"] .pagination a.active,
+
+/* Active pagination button (dark theme) */
+body[data-theme="default-dark-v1"] .pagination a.active {
+	background-color: var(--brand-primary-color) !important;
+	color: #fff !important;
+}
+
+/* Hover pagination button (dark theme) */
 body[data-theme="default-dark-v1"] .pagination a:hover {
-  background-color: var(--brand-primary-color) !important;
-  color: #fff !important;
+	background-color: var(--brand-primary-color) !important;
+	color: #fff !important;
 }
 
+/* Button base style using primary color */
 body[data-theme="default-dark-v1"] button {
-  font-weight: 400;
-  --n-color: var(--brand-primary-color);
-  --n-color-hover: var(--brand-primary-color);
-  --n-color-pressed: var(--brand-primary-color);
-  --n-color-focus: var(--brand-primary-color);
-  --n-color-disabled: var(--brand-primary-color);
-  --n-ripple-color: var(--brand-primary-color);
-  --n-text-color: #fff;
-  --n-text-color-hover: #fff;
-  --n-text-color-pressed: #fff;
-  --n-text-color-focus: #fff;
-  --n-text-color-disabled: #fff;
-  --n-border: 1px solid var(--brand-primary-color);
-  --n-border-hover: 1px solid var(--brand-primary-color);
-  --n-border-pressed: 1px solid var(--brand-primary-color);
-  --n-border-focus: 1px solid var(--brand-primary-color);
-  --n-border-disabled: 1px solid var(--brand-primary-color);
+	font-weight: 400;
+	--n-color: var(--brand-primary-color);
+	--n-color-hover: var(--brand-primary-color);
+	--n-color-pressed: var(--brand-primary-color);
+	--n-color-focus: var(--brand-primary-color);
+	--n-color-disabled: var(--brand-primary-color);
+	--n-ripple-color: var(--brand-primary-color);
+	--n-text-color: #fff;
+	--n-text-color-hover: #fff;
+	--n-text-color-pressed: #fff;
+	--n-text-color-focus: #fff;
+	--n-text-color-disabled: #fff;
+	--n-border: 1px solid var(--brand-primary-color);
+	--n-border-hover: 1px solid var(--brand-primary-color);
+	--n-border-pressed: 1px solid var(--brand-primary-color);
+	--n-border-focus: 1px solid var(--brand-primary-color);
+	--n-border-disabled: 1px solid var(--brand-primary-color);
 }
 
-body button.bg-apple-500,
+/* Primary color override for specific button backgrounds */
+body button.bg-apple-500 {
+	background-color: var(--brand-primary-color) !important;
+}
+
 body button.bg-curious-blue-600 {
-  background-color: var(--brand-primary-color) !important;
+	background-color: var(--brand-primary-color) !important;
 }
 
+/* Primary color override for text */
 body .text-curious-blue-600 {
-  color: var(--brand-primary-color) !important;
+	color: var(--brand-primary-color) !important;
 }
 
+/* Primary color override for focus ring */
 body .focus\:ring-curious-blue-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: var(--brand-primary-color) !important;
+	--tw-ring-opacity: 1;
+	--tw-ring-color: var(--brand-primary-color) !important;
 }
 
-nav a[style*="color: rgb(56, 160, 219)"][style*="border-color: rgb(56, 160, 219)"] {
-  color: var(--brand-primary-color) !important;
-  border-color: var(--brand-primary-color) !important;
+/* Primary color override for active tabs */
+nav
+  a[style="color: rgb(56, 160, 219); border-color: rgb(56, 160, 219); padding-left: 10px; padding-right: 10px;"],
+nav
+  a[style="color: rgb(56, 160, 219); padding-left: 10px; padding-right: 10px; border-color: rgb(56, 160, 219);"] {
+	color: var(--brand-primary-color) !important;
+	border-color: var(--brand-primary-color) !important;
 }
+
 
 /* ================= SECOND COLOR STYLES ================= */
 
-body[data-theme="default-dark-v1"] .n-button--primary-type,
-#location-dashboard-header button,
-#location-dashboard-header .n-input {
-  --n-color: var(--brand-secondary-color) !important;
-  --n-color-hover: var(--brand-secondary-color) !important;
-  --n-color-pressed: var(--brand-secondary-color) !important;
-  --n-color-focus: var(--brand-secondary-color) !important;
-  --n-color-disabled: var(--brand-primary-color) !important;
-  --n-ripple-color: var(--brand-primary-color) !important;
-  --n-border: 1px solid var(--brand-primary-color) !important;
-  --n-border-hover: 1px solid var(--brand-primary-color) !important;
-  --n-border-pressed: 1px solid var(--brand-primary-color) !important;
-  --n-border-focus: 1px solid var(--brand-primary-color) !important;
-  --n-border-disabled: 1px solid var(--brand-primary-color) !important;
-  background-color: var(--brand-secondary-color) !important;
+/* Primary-type button uses second color for fill */
+body[data-theme="default-dark-v1"] .n-button--primary-type, #location-dashboard-header button, #location-dashboard-header .n-input {
+	--n-color: var(--brand-secondary-color) !important;
+	--n-color-hover: var(--brand-secondary-color) !important;
+	--n-color-pressed: var(--brand-secondary-color) !important;
+	--n-color-focus: var(--brand-secondary-color) !important;
+	--n-color-disabled: var(--brand-primary-color) !important;
+	--n-ripple-color: var(--brand-primary-color) !important;
+	--n-border: 1px solid var(--brand-primary-color) !important;
+	--n-border-hover: 1px solid var(--brand-primary-color) !important;
+	--n-border-pressed: 1px solid var(--brand-primary-color) !important;
+	--n-border-focus: 1px solid var(--brand-primary-color) !important;
+	--n-border-disabled: 1px solid var(--brand-primary-color) !important;
+	background-color: var(--brand-secondary-color) !important;
 }
+
 
 /* ================= EXTRA STYLES ================= */
 
 #location_dashboard-btn-dashboard_switcher span svg {
-  stroke: var(--ghl-dashboard-icon-color) !important;
+	stroke: var(--ghl-dashboard-icon-color) !important;
 }
 
-#location_dashboard-datepicker-dashboard_header_range .n-date-picker-icon,
-#location_dashboard-datepicker-dashboard_header_range .n-date-picker-icon > svg > g > g {
-  fill: var(--ghl-dashboard-icon-color) !important;
+#location_dashboard-datepicker-dashboard_header_range .n-date-picker-icon, #location_dashboard-datepicker-dashboard_header_range .n-date-picker-icon > svg > g > g {
+	fill: var(--ghl-dashboard-icon-color) !important;
 }
 
 /* Hide extra svg icon */
@@ -946,5 +1059,5 @@ body[data-theme="default-dark-v1"] .n-button--primary-type,
 #sb_app-marketplace svg,
 #sb_location-mobile-app svg,
 #sb_settings svg {
-  display: none;
+ display: none;
 }
