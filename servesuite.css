@@ -12,8 +12,8 @@
 
 :root {
 	--important-css-loaded: true;
-	--headline-font: 'Benzin';
-	--body-font: 'Noto Sans';
+	--headline-font: Benzin;
+	--body-font: Noto Sans;
 	--white-color: #ffffffff;
 	--dark-color: #1A202C;
 	--Acent-color: #4B5563;
