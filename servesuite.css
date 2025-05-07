@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('https://storage.googleapis.com/msgsndr/dQnsV9M3QcNePrSSuGQP/media/67ab54c3192469e4dca3b74a.woff2') format('woff2'),
+       url('https://storage.googleapis.com/msgsndr/dQnsV9M3QcNePrSSuGQP/media/67ab54c3eeb73764b86ce85d.font-woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
 	--important-css-loaded: true;
-	--headline-font: Poppins;
-	--body-font: Poppins;
+	--headline-font: 'Benzin';
+	--body-font: 'Noto Sans';
 	--white-color: #ffffffff;
 	--dark-color: #1A202C;
 	--Acent-color: #4B5563;
