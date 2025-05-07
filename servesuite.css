@@ -19,7 +19,7 @@
 	--Acent-color: #4B5563;
 	--ghlstyle-transparent: rgba(0, 0, 0, 0);
 	--scroll-color: #9e9e9e;
-	--ghl-white-label-dashboard-color:#F1F4F7;
+	--ghl-white-label-dashboard-color:#F9F8F7;
 	
 	--top-nav-menu-color: #2a3941ff;
 	--top-nav-menu-active-color: #38a9e5ff;
@@ -29,11 +29,11 @@
 	--top-nav-menu-active-bg: #f25a0700;
 	--top-nav-menu-font-size: 14px;
 	--top-nav-border-width: 0 0 0.1rem 0;
-	--top-nav-border-radius: 1px;
+	--top-nav-border-radius: 0;
 	--top-nav-border-style: solid;
 	--top-nav-border-color: #ffffff00;
 	--top-nav-border-hover-width: 0 0 0.1rem 0;
-	--top-nav-border-hover-radius: 1px;
+	--top-nav-border-hover-radius: 0;
 	--top-nav-border-hover-style: solid;
 	--top-nav-border-hover-color: color-mix(in srgb, var(--menu-active-color), transparent 20%);
 	--top-nav-border-active-width: 0 0 0.1rem 0;
@@ -93,7 +93,7 @@ html body .v2-open #sidebar-v2,
 /* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
 	background-color: color-mix(in srgb, var(--scroll-color), transparent 60%);
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 /* Thumb on hover */
